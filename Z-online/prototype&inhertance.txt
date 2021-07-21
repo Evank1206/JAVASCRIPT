@@ -1,0 +1,70 @@
+--- CODE --g bichih 2 turliin argachlal also UDAMSHIL/INHERTANCE---
+******FUNCTION -d tuvlursun "Prosture" handalttai programme * hurdtai ajillna * app tomroh tusam shbagetti code uusene
+******OBJECT-d tuvlursun programme / UDAMSHUULAH ZAMAAR / * emh tsegts, 
+
+////// engiin object bichih 2 arga; 
+////// Mun Udamshil ashiglaj shine object uusgeh;
+
+////// prototype chain gej yu ve?  ._ _ proto_ _   yaj ajiladag ve?  OBJECT & NULL gj yu ve? 
+
+--------------- PROTOTYPE UNDAMSHIL && EDGEER UDAMSHSAN HELBERIIG PROTOTYPE CHAIN GENE.
+let materi = {
+    name: "bodis",
+    creature: "alive"
+}
+let animal = Object.create(materi);
+animal.action = "move ",
+animal.drink = "water ",
+animal.survive = "eat ",
+
+animal.eat = function () {
+    console.log("animals " + this.creature + " and  " + this.action + " & drink " + this.drink + " & " + this.survive );
+    
+}
+animal.eat();
+
+let hun = Object.create(animal);
+hun.name = "humans",
+    hun.smart = function () {
+        console.log(this.name + " way smarter than other animals and " + hun.action + " drink " + hun.drink + " & " + hun.survive);
+    }
+    hun.smart();
+    console.log(hun.__proto__); // animal, materi buyu etseg , grandfa-g harna
+    console.log(animal.__proto__); //materi buyu etsegee harna
+    console.log(materi.__proto__); //main Object -uud ni bairlana
+    console.log(Object.__proto__); //null buyu obj - n hyazgaar
+
+---CREATING CONSTRUCTOR FUNCTION--- 
+
+// WITHOUT Constructor function
+function Animal(name) {
+    let x = Object.create(Animal.prototype);
+    x.what = name;
+    x.eat = function(){
+        console.log(this.what + " drinks water");
+    }
+    return x;
+};
+let n = Animal("Cow");
+n.eat();
+
+console.log("........................");
+
+// WITH CONSTRUCTOR FINCTION
+
+function Hun(name) {
+    // let x = Object.create(Animal.prototype);
+    this.who = name;
+    this.diet = function(){
+        console.log(this.who + " drinks juice");
+    }
+    // return x;
+};
+let a = new Hun("Ankhiliun");
+a.diet();
+
+////// constructor function ashiglaj UDAMSHIL-G UUSGEH
+////// bind, call, apply
+////// object -d bind, call, apply -g hergeleh. // buyu object dotoroh function -g uur object-d zeelej ashiglah & tuhain function ii "this" zaagchiig uurchiluh
+
+////// function -d bind, call, apply -g hergeleh

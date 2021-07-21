@@ -1,0 +1,30 @@
+.body{
+    background-color: grey;
+}
+.container{
+    /* background-color: grey; */
+
+} 
+.card-1{
+    /* float: left; */
+    padding: 10px;
+}
+.card-2{
+    /* float: right; */
+    padding: 10px;
+}
+.winner{
+    position: absolute;
+    left: 45%;
+    top: 30%;
+}
+.active{
+    position: absolute;
+    left: 83%;
+    top: 17%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid blue;
+    background-color:red;
+    border-radius: 90%;
+}

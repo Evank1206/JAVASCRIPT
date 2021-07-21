@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Game-21</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header section -->
+        <div class="card mb-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRHcbkdlje9rJVgWGP_xiaTIBm7UiYPjgPcxiu2tnAQzv1uCpLa&usqp=CAU"
+                class="card-img-top" alt="...">
+            <div class="winner">
+                <h1 class="card-text">WINNER</h1>
+            </div>
+            <div class="card-body">
+                <div class="card col-sm-2 float-left">
+                    <h5 class="card-title">Score</h5>
+                    <h1 class="card-text mainScore">0</h1>
+                </div>
+                <div class="card col-sm-2 float-right">
+                    <h5 class="card-title float-right">Score</h5>
+                    <h1 class="card-text float-right">0</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- carts -->
+        <!-- 1 -->
+        <div class="col-sm-3 float-left">
+            <div class="card card-1">
+                <div class="card-body">
+                    <h3 class="card-title">PLAYER 1</h3>
+                    <h4 class="card-text currentScore"></h4>
+                    <a href="#" class="btn btn-primary collect">collect</a>
+                    <a href="#" class="btn btn-success push float-right">push</a>
+                    <!-- DOT -->
+                    <div class="active active-1"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-sm-3 float-right">
+            <div class="card card-2">
+                <div class="card-body">
+                    <h3 class="card-title">PLAYER 2</h3>
+                    <h4 class="card-text">0</h4>
+                    <a href="#" class="btn btn-primary">collect</a>
+                    <a href="#" class="btn btn-success float-right">push</a>
+                    <!-- DOT -->
+                    <div class="active-2"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- jQeury cdn -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<!-- js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

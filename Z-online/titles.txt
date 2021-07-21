@@ -1,0 +1,125 @@
+/* section 1 */
+
+// ceorcion && хувиргалт  : Example : " barag l concatenate strings number, boolen "
+// prototype's functions (push(), pop(), shift(), unshift(), slice(), splice())
+// && || 
+// switch operator  : example : 7 hongin udruudiig oloh // suragchiin dung ni haruulah
+// function Statement/Declaretion && Expression
+// object function (expression)
+// forloop 
+// continue; break; (till looking for) : example : forLoop & If,else -g ashiglaj array-s 7 huvaagddag toog oloh, module
+// whileLoop (till the condition true || agreed while loop will run);
+// do whileLoop (condition is after)
+// value (single variable) && reference (array & Object ) : example : massive dotroh utaga huvirah || es huvirah
+// typeof 
+// try { code here } & catch(err){catch the error here}
+
+console.log(num)
+
+let something = "stop";
+
+1)...
+while(something !== "stop"){
+  console.log("keep searching...")
+}
+console.log("found the the secret word " + "'"+ something +"'");
+
+2)...
+do {
+  console.log("keep searching...")
+}while(something !== "stop");
+console.log("found the the secret word " + "'"+ something +"'")
+
+value && reference
+
+var arr = 1;
+
+var arr2 = arr;
+arr2 = 5
+
+console.log(arr2) // 5
+console.log(arr)  // 1
+
+/* section 2 */
+
+* Anhnii toog oloh "to find prime number
+//1-100 хүртлэх тооны нийлбэрийг олох нь:
+// зөвхөн 7-д хуваагдах тоонуудыг олох нь:
+// 100 хүртлэх анхы тоог олох нь:
+
+for (let i = 2; i <= 100; i++) {
+    if(findPrimeNum(i) === true) console.log("this is prime num " + i);
+    
+} 
+function findPrimeNum(num) {
+    let primeNum = true;
+    for(let x = 2; x < num; x++){
+        if(num % x === 0){
+            primeNum = false;
+            break;
+        }
+    }
+    return primeNum;
+}
+console.log("function ended:");
+
+
+/* section 3 */
+
+* Array-s hamgiin ih bolon baga toog oloh
+conse
+// хамгийн бага болон их тооны байрлыг нь тодорхойлох
+// array -с хамгийн бага болон хамгийн их тооны байрыг солих
+
+// create array and put 
+let arr = [];
+// random 100 random numbers
+for (let i = 0; i < 10; i++) {
+    const randomNum = Math.floor(Math.random(i) * 100);
+    arr.push(randomNum);
+}
+console.log(arr);
+
+// to find minimum number from above arr
+let minNum = 100;
+let minNumIndex = -1;
+for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    if (arr[i] < minNum) {
+        minNum = arr[i];
+        minNumIndex = i;
+
+    }
+}
+console.log(minNum + " minimium number from arr");
+console.log(minNumIndex + " index of min number in array");
+
+// to find MAX number from above arr
+let maxNum = 0;
+let maxNumIndex = -1;
+for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    if (arr[i] > maxNum) {
+        maxNum = arr[i];
+        maxNumIndex = i;
+
+    }
+}
+console.log(maxNum + " MAX number from arr");
+console.log(maxNumIndex + " index of min number in array");
+
+let minToogTur = arr[minNumIndex];
+arr[minNumIndex] = arr[maxNumIndex];
+arr[maxNumIndex] = minToogTur;
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    
+}
+
+
+
+
+
+
+

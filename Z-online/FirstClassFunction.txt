@@ -1,0 +1,48 @@
+*pass function as argument : example: tursun on-s nas-g oloh, olson nas-g sort hiih, bas zurhinii maximum tsohiltiig oloh
+// Math object-g ashiglah
+// array -g random onuudaar duurgeed
+// nass-g ni gargah function bichih
+// garsan nasan dotor adult, children-r ni yalgah (true, false utag butsaah) arr -d hadgalaj butsaah
+// hunii nasiig * 0.67 - 206.9 r hashad tuhain nasand tohirson zurhnii dundaj tsohiltiin too garna
+
+//deerh coding tovi ch huvilbar buyu function nii argumentr function damjuulah function(function)
+// EXAMPLE: FIRST CLASS FUNCTION
+
+ var years = [1999, 1995,1989, 1988, 2005,2009,1997];
+function general(myArr,fn){
+  var arr = [];
+  for(var i=0; i<myArr.length; i ++){
+    arr.push(fn(myArr[i]))
+  }
+  // console.log(arr)
+  return arr;
+}
+
+function findOutAge(el){
+  return new Date().getFullYear() - el
+}
+
+function sort(el){
+  return el >= 21;
+}
+
+function heartRate(el){
+  return 206.9 - 0.67 * el
+}
+
+var ages = general(years, findOutAge);
+console.log(ages);
+
+var adult = general(ages, sort);
+console.log(adult);
+
+var heartbeat = general(ages, heartRate);
+console.log(heartbeat);
+
+
+* function dotoroos functionii codiig butsaah : example: interViewQuestion 
+// function-s function ii codiig butsaah
+
+* IIFE gej yu ve? jishee bichih, tailbarlah 
+* Closure
+// example: showPost//enter email address & recieve news updates || toonii niilberiig asuugaad hariug ni helj uguh

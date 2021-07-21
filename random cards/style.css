@@ -1,0 +1,32 @@
+body{
+    background-color:lightblue;
+}
+
+#main{
+border: solid blue;
+
+text-align: center;
+}
+#container{
+  
+    border: solid green;
+    padding: 10px;
+    min-height: 60vh;
+
+}
+#action{
+    border: solid yellow;
+    padding: 10px;
+    min-height: 20vh;
+    text-align: center;
+    margin: auto 0;
+
+}
+#btn{
+font-size: large;
+}
+#zurag{
+    margin: auto 40%;
+    height: auto;
+    width: 400px;
+}

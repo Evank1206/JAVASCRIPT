@@ -1,0 +1,22 @@
+/*1*/  data encapsulatio / private data, private function /. function -g massive tei ni hamt daldlah "IIFE"
+
+EXAMPLE:
+
+let uifn = (function(){
+  let text = "What is your name? "; // private data
+  console.log(text);
+  function answer(name){    // private function
+    return "My name is " + name;
+  }
+  return {
+    display: function(a){
+      let x = answer(a);
+      console.log(x);
+    }
+  }
+})();
+
+
+(function(){
+  uifn.display("Eva")
+})()

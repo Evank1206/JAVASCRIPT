@@ -1,0 +1,123 @@
+							REVIEW:
+
+//  let obj = {
+//    name: "Eva",
+//    gender: "Male",
+//    info: {
+//      age : 21,
+//      address: "121 Park Plaza",
+//      phone: 415,
+//      display: function(){
+//       //  console.log("my name is " + obj.name + ". I'm " + this.age+ ". I live in " + this.address);
+//      return "my name is " + obj.name + ". I'm " + this.age+ ". I live in " + this.address;
+//      }
+//    }
+//  }
+
+// //  console.log(obj.info.display())
+// let x = obj.info.display();
+// console.log(x);
+
+// let obj2 = {
+
+// };
+// obj2.name = "Anna";
+// obj2.gender = "Female";
+// obj2.info = {};
+// obj2.info.age = 19;
+// obj2.info.display = function(){
+//   return "Her name is " + obj2.name + ". She is " + this.age;
+// }
+// let w = obj2.info.display();
+// console.log(w);
+
+/* OBJECT UDAMSHUULAH */
+
+// let amitan = {
+//   name : "Bear",
+//   power : 900,
+//   health : 100,
+//   hoolloh : function(food){
+//     this.food =  food;
+//     return "The king of forest is " + this.name + " has " 
+//     + this.power + " Power & " + this.health + " Health. Main consume is " + this.food;
+//   }
+// };
+
+// let x = amitan.hoolloh("MEAT");
+// console.log(x)
+
+// let hun = Object.create(amitan);
+
+// hun.name = "Eva";
+// // hun.power = "100";
+// hun.smart = 150;
+// hun.hunting = function(food){
+//   this.food = food;
+//   return "The king of Nomadic is " + this.name + " has " 
+//     + this.power + " Power & " + this.health + " Health. Main consume is " 
+//     + this.food + " also IQ is " + this.smart;
+// }
+
+// let y = hun.hunting("Cook Meat & Veggi");
+// console.log(y)
+
+// console.log(hun.__proto__);
+
+/* CONSTRUCTOR FUNCTION */
+
+function Animal(ner){
+  this.name = ner;
+  // this.info = function(){
+  //   return "This is " + this.name;
+  // }
+}
+
+Animal.prototype.info = function(){
+    return "This is " + this.name;
+}
+Animal.prototype.gender = function(x){
+  return x;
+}
+
+let f = new Animal("Eva")
+console.log(f.info());
+console.log(f.gender("Male"))
+
+let f2 = new Animal("Anna");
+f2.xxx = function(){
+  return this.name + " is my girlFriend"
+}
+
+console.log(f2.info());
+console.log(f.gender("Female"));
+console.log(f2.xxx())
+
+
+// console.log(f2.__proto__ === Animal.prototype)
+
+// function Hun(){
+//   let obj = Object.create(Hun);
+//   obj.name = "Anna";
+//   obj.personal = function(){
+//     return " Her name is " + this.name;
+//   }
+//   return obj;
+// }
+
+// let xxx =  Hun();
+// console.log(xxx.personal())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
