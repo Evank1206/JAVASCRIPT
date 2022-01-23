@@ -28,7 +28,6 @@ function info(city, age){
 
 
                                                             /* REFERENCE */
-
 // Objective data type: PART ONE
 
 var item = {

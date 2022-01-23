@@ -63,16 +63,31 @@ water("Jenny" , "Thomas");
 // num(2,2);
 
 /* 7 */
-function add(x){
+function fn(x){
     return x[0];
 }
-let call = add("STRING");
+let call = fn("STRING");
 console.log(call);
 
 /* 8 */
-function string(x){
+function example(x){
     return x + "s"
 }
 
-let log = string("add");
+let log = example("add");
 console.log(log);
+
+/* 9 */
+
+var sainuu = function(){
+    console.log("hello from sain uu function");
+  };
+  
+  sainuu();
+  // String 
+  Boolean.prototype.hey = function(){
+    console.log("this is hello from hey function");
+  };
+  
+//   "lalla".hey();
+  true.hey();
