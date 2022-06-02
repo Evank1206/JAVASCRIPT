@@ -32,6 +32,7 @@ var obj2 = {
 };
 
 // USING THE METHODS FOR CHANGING "THIS"
+
 /* bind */
 // var sample = obj.print.bind(obj2, "SMALL",);
 // sample("WHITE");
