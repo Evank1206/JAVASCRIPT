@@ -1,3 +1,6 @@
+/* TO ES6 CORATION, ARROW FUNCTION, DISSTRUCTE OBJECT, convert DOM elemet to array list, 
+findIndex method, SPREAD operator, REST operator, default parameter, new Map() operator, reduce() method, CLASS CONSTRACTOR FUNCTION,*/
+
 // ES5 CORATIONS
 const name = "Evank";
 let age = 32;
@@ -145,6 +148,7 @@ for(const el of boxs){
 
 };
 
+console.log(`...............................................................`)
 
 // ES6 findIndex METHOD
 // ES5 indexOf() Method
@@ -162,7 +166,10 @@ let xxx = arra.findIndex((el)=> el >= 18);
 console.log(`index: ${xxx}`);
 console.log(`actual Num: ${arra.find(el => el >= 18)}`);
 
-// ES6 SPREAD operator
+console.log(`...............................................................`)
+
+
+// ES6 SPREAD operator // DOM elementiig array ruu hurvuulnej array ZADLANA
 
 const newDivlist = document.querySelectorAll(".box");
 // DOM ELEMENT -G ARRAY LIST RUU HURVUULEH
@@ -189,4 +196,197 @@ let interpretator = ["typescript", "javaScript", "php", "phyton"];
 let compiler = ["java", "c#", "c++"];
 
 let allprogrammingLanguages = [...interpretator, ...compiler];
-console.log(allprogrammingLanguages)
+console.log(allprogrammingLanguages);
+
+console.log(`...............................................................`)
+
+
+// ES6 REST OPERATOR 
+// ES5
+function findAge(){
+  console.log(arguments);
+  let a = Array.prototype.slice.call(arguments);
+  console.log(a);
+  a.forEach(function(el){
+    el = 2022 - el;
+    console.log(el)
+
+  });
+};
+findAge("hey",1999,2010,2000,1996,1998);
+
+// ES6 rest its reunited it to array 
+
+function findAge2(...years){
+  years.forEach(el => console.log(`ages: ${2022 - el}`))
+}
+findAge2(2012,2000,1997,1993);
+
+console.log(`...............................................................`)
+
+
+// ES6 DEFAULT
+
+// ES6 paramter 
+// ES5
+function translate(language, lang){
+  if(lang === "en")
+    switch(lang){
+      case "mn" : console.log("Angliar yaj heleh be?  " + language); break;
+      case "en" : console.log("how to say " + language); break;
+    }
+  }
+  translate("what is your name?", "en");
+  translate("chmag hen gedeg be?", "mn");
+  // ES6
+  
+  function translate2(question = "hhh", language = "mn"){
+    switch(language){
+      case "mn" : console.log("anglair Sainuu? gehiig yu gedeg ve? " + question); break;
+      case "en" : console.log("how to say HI? by mongolian  " + question); break;
+    }
+  };
+  translate2();
+
+console.log(`...............................................................`)
+
+// ES6 Map();
+
+let l = new Map();
+l.set(2, "month");
+l.set("name", "John");
+l.set(true, "age");
+console.log(l);
+
+console.log(l.get(true));
+l.delete(2);
+
+l.forEach((a,b)=>{
+  console.log(a,b)
+});
+
+for(const el of l){
+  console.log(el)
+};
+
+// davhardaagui ugiin toog oloh
+let text = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem libero dolorem et laudantium iure 
+aliquam quo vel cupiditate labore numquam, cumque esse placeat optio nostrum voluptatem eveniet repudiandae odit?`;
+let textx = text.split(" "); //zaigaar ni zadlaad
+let myMap = new Map(); // hooson object uusgeed
+
+textx.forEach(el => myMap.set(el,1)); //uusgesen object ruugaa forEach davtaltaar text ee hiigeed
+// textx.forEach(el => myMap.get(el, "lorem"));
+// davhardaagui ugiin too 
+console.log(myMap.size); // davhtsaagui ugiin toog haruulahs
+
+console.log(`...............................................................`)
+
+// ES6 CONSTRUCTOR FUNCTION
+
+
+console.log(`...............................................................`);
+
+// REDUCE() to find total amount;  min num;  max num; from the array 
+let arr3 = [4,6,3,5,100,7,2,13];
+
+let totalAmount = arr3.reduce((a,b)=> a + b);
+console.log(totalAmount)
+// es5
+let minNum = arr3.reduce((min, b)=>{
+  if (b < min) min = b;
+  return min;
+});
+console.log(minNum);
+// OR es6
+let maxNum = arr3.reduce((max, b)=> b < max ? max : b);
+console.log(maxNum);
+
+console.log(`................................................................`);
+
+// ES5 construtor function uusgeh ni
+let Income = function(id, desc, val){
+  this.id = id;
+  this.desc = desc;
+  this.val = val;
+};
+Income.prototype.infoo = function(){
+  console.log(this.id + " " + this.desc + " " + this.val);
+};
+let e1 = new Income(1, "salary", "100000");
+e1.infoo();
+
+// ES6 constructor function uusgeh ni using CLASS
+class Expenss{
+  constructor(id,desc,val){
+    this.id = id;
+    this.desc = desc;
+    this.val = val;
+  }
+  indo(){
+  console.log(this.id + " " + this.desc + " " + this.val);
+  };
+  // neg l udaa ashigalh ch tiim function baivan daraah baidlaar bichni
+  static lalaa(){
+    console.log(`this is just function from class constructor`)
+  }
+};
+let i2 = new Expenss(2, "food", "200");
+i2.indo();
+
+Expenss.lalaa();
+
+console.log(`...............................................`);
+
+// CLASS construct CLASS function nii udamshil
+//super function
+class Transaction {
+    constructor(id,desc,val){
+      this.id = id;
+      this.desc = desc;
+      this.val = val;
+  }
+   info(){
+    //  using intanceof buyu ene ni tuhain obj g helj baigaa hereg
+    let checkType = this instanceof Income2 ? "Income" : "Expense"; 
+    console.log(`(${checkType}) ${this.id} ${this.desc} ${this.val}`);
+  };
+}
+// sub function
+class Income2 extends Transaction{ //sub function
+  constructor(id,desc,val,onlyIncome = true){
+      super(id,desc,val);
+      this.onlyIncome = onlyIncome;
+  }
+  static thisISprivateFun(){
+    let x = [12,34,683,23,6];
+    let y = [23,54,65,87,890];
+    let both = [...x, ...y];
+    let minArr = [];
+    both.forEach(el => el <= 50 ? minArr.push(el) : false);
+    console.log(`Min NUm:  ${minArr}`);
+  }
+};
+let i21 = new Income2(1,"kaka", 1234);
+i21.info();
+Income2.thisISprivateFun()
+
+// sub function
+class Expense2 extends Transaction { //sub function
+  constructor(id,desc,val){
+    super(id,desc,-val);
+  }
+}
+let in1 = new Income2(1,"inc", 10000);
+let in2 = new Income2(2,"inc", 100001);
+let in3 = new Income2(3,"inc", 1000002);
+let ex1 = new Expense2(1,"ex", 100);
+let ex2 = new Expense2(2,"ex", 90);
+let arrr = [];
+arrr.push(in1,in2,in3,ex1,ex2);
+console.log(arrr);
+arrr.forEach(el=> el.info());
+
+// Income2.thisISprivateFun();
+
+console.log(`...............................................`);
