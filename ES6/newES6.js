@@ -7,38 +7,35 @@ let age = 32;
 let address = "233 magnolia ave Millbrea City, California";
 console.log("My name is " + name + ". I am " + age + " years old. " + " I live in " + address + ".");
 // ES6 CORATIONS
-console.log(`My name is ${name}. 
-I am ${age} years old. 
-I live in ${address}.`);
+console.log(`My name is ${name}. I am ${age} years old. I live in ${address}.`);
 
 console.log(name.startsWith("E"));
 console.log(name.endsWith("n"));
 
 console.log("name ".repeat(1)) //ES5
-console.log(`${name} ` .repeat(1)) //ES6
+console.log(`${name} `.repeat(1)) //ES6
 console.log(".....................................")
 
-// ES6 Arrow function 
-
+// ES6 ARROW FUNCTION 
 const year = [1990,1998,2006,1993,1997];
-
+// map() method dotoroos zaaval return hiih estoi
 // let process = year.map((el)=>{
 //   return 2022 - el;
 // });
 // console.log(process);
-// arrow function type : 1   (if there is passing single argument "el", may write without () )
-let process1 = year.map(el => 2020 - el)
+// ES6 ARROW FUNCTION type : 1   (if there is passing single argument "el", may write without () )
+let process1 = year.map(el => 2020 - el); // single arg zaaval return gej bichih shaardlagggui
 console.log(process1);
 
 console.log(".....................................")
 
-// arrow function type : 2  (if there is passing two or more arguments "el, index, arr", may write with () )
+// ES6 ARROW FUNCTION type : 2  (if there is passing two or more arguments "el, index, arr", may write with () )
 let process2 = year.map((el,index) => index + 2021 - el)
 console.log(process2);
 
 console.log(".....................................")
 
-// arrow function type : 3  (if there are line of codes, may write using return & `${}`
+// ES6 ARROW FUNCTION type : 3  (if there are line of codes, may write using return & `${}`
 
 let process3 = year.map((el, index) => {
   let j = index + 1;
@@ -48,7 +45,7 @@ console.log(process3);
 
 console.log(".....................................")
 
-// arrow function define global variable or obj, 
+// ES6 ARROW FUNCTION define global variable or obj, 
 let info = {
    name : "Evank",
    fun : function(){
@@ -68,12 +65,13 @@ let info = {
 };
 info.fun();
 
-// desstructure object in ES6
+// DESSTRUCTURE OBJECT in ES6
 // ES5 METHOD (ARRAY -G ZADLAH)
 let ar = ["Evank", 32, "233 magnolia ave", "Millbrea", "CA"];
 const ner = ar[0];
-let nas = ar[1]; // etc...
-console.log("My name is " + ner + ". I'm " + nas + " old."); // etc ...
+let nas = ar[1]; 
+let adds = ar[2]  // etc...
+console.log("My name is " + ner + ". I'm " + nas + " old." + " I live in " + adds); // etc ...
 
 console.log(".....................................");
 
@@ -84,7 +82,6 @@ let [firstName, a, add, city, state] = arr;
 console.log(`My name is ${firstName}. I'm ${a} , My adresss is ${add} , city is ${city}, state is ${state}`);
 
 // ES6 (OBJ - g ZADLAH)
-
 let obj = {
   name: "Evank",
   persnalInfo: {
@@ -108,7 +105,7 @@ function my(){
 };
 
 let [aaa, bbb, ccc, ddd] = my();
-console.log(aaa, bbb, ccc, ddd) // or
+console.log(aaa, bbb, ccc, ddd) // OR
 console.log(`${aaa}, nice ${bbb}, writing ${ccc}, on ${ddd}`);
 
 console.log(".....................................");
@@ -120,7 +117,9 @@ const boxs = document.querySelectorAll(".box");
 console.log(boxs);
 // const lala = Array.prototype.slice.call(boxs);
 // console.log(boxs);
-// ES6
+
+// ES6 using Array.from() method
+
 // const lalla = Array.from(boxs)
 // boxs.forEach((el)=>{
 //   console.log(el);
@@ -168,7 +167,6 @@ console.log(`actual Num: ${arra.find(el => el >= 18)}`);
 
 console.log(`...............................................................`)
 
-
 // ES6 SPREAD operator // DOM elementiig array ruu hurvuulnej array ZADLANA
 
 const newDivlist = document.querySelectorAll(".box");
@@ -179,7 +177,6 @@ const newDivlist = document.querySelectorAll(".box");
 // const k = Array.from(newDivlist);
 // OR
 // const k = [...newDivlist];
-
 // console.log(k);
 
 // change(k[0],k[1])
@@ -238,8 +235,8 @@ function translate(language, lang){
   }
   translate("what is your name?", "en");
   translate("chmag hen gedeg be?", "mn");
+
   // ES6
-  
   function translate2(question = "hhh", language = "mn"){
     switch(language){
       case "mn" : console.log("anglair Sainuu? gehiig yu gedeg ve? " + question); break;
@@ -282,14 +279,9 @@ console.log(myMap.size); // davhtsaagui ugiin toog haruulahs
 
 console.log(`...............................................................`)
 
-// ES6 CONSTRUCTOR FUNCTION
-
-
-console.log(`...............................................................`);
-
 // REDUCE() to find total amount;  min num;  max num; from the array 
 let arr3 = [4,6,3,5,100,7,2,13];
-
+// a ni container buguud harin b ni element buguud containerruu proccess hiigdeed orood baina gesen ug
 let totalAmount = arr3.reduce((a,b)=> a + b);
 console.log(totalAmount)
 // es5
@@ -303,6 +295,8 @@ let maxNum = arr3.reduce((max, b)=> b < max ? max : b);
 console.log(maxNum);
 
 console.log(`................................................................`);
+// ES6 CONSTRUCTOR FUNCTION
+console.log(`...............................................................`);
 
 // ES5 construtor function uusgeh ni
 let Income = function(id, desc, val){
@@ -385,7 +379,11 @@ let ex2 = new Expense2(2,"ex", 90);
 let arrr = [];
 arrr.push(in1,in2,in3,ex1,ex2);
 console.log(arrr);
+// info function g duudah
 arrr.forEach(el=> el.info());
+// budegt iig oloh ene ni expenese ee hasaad uldsen too ym
+let seeBudget = arrr.reduce((budgetCON, el) => budgetCON + el);
+console.log(seeBudget);
 
 // Income2.thisISprivateFun();
 
