@@ -1,6 +1,16 @@
 /* 1 */
-// continue & break
-// find number/s from array & divided by 7 & square the sum  
+// 1. continue & break
+const arr = [1, 23, 21, 45, 34, 32, 76, 56, 89, 90, 100];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+    if (arr[i] % 7 !== 0) continue;
+    console.log(arr[i] + " this is the one")
+    break;
+}
+// console.log("program ended here");
+
+// 2. find number/s from array & divided by 7 & square the sum  
 const arrOfsomething = [12, 34, 56, 90, 21, 1, 97, 100];
 
 for (let i = 0; i < arrOfsomething.length; i++) {
@@ -13,12 +23,4 @@ for (let i = 0; i < arrOfsomething.length; i++) {
 }
 // console.log("programm duuslaa");
 
-const arr = [1, 23, 21, 45, 34, 32, 76, 56, 89, 90, 100];
-
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i])
-    if (arr[i] % 7 !== 0) continue;
-    console.log(arr[i] + " this is the one")
-    break;
-}
-// console.log("program ended here")
+// 3. 

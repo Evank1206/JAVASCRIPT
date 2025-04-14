@@ -20,7 +20,7 @@ console.log("....................................");
 
 // }
 
-/* 3 */
+/* 3 */ // Add curtain numbers
 console.log("....................................");
 // adds 4 + 5 + 7 = 16
 // var sum = 0;
@@ -34,36 +34,15 @@ console.log("....................................");
 // console.log(sum);
 
 
-/* 4 */
+/* 4 */// only EVEN number's until 20
 console.log("....................................");
-
-// for(i=0; i <= 100; i++){
-//     console.log(i)
-// }
 // for(i=0; i<=20; i=i+1){
 //     if(i % 2 == 0){
 //         console.log(i)
 //     }
 // }
 
-/* 5 */
-console.log("....................................");
-
-// for(i=1; i <= 100; i++){
-//     console.log(i)
-// }
-
-/* 6 */// EVEN #S
-console.log("....................................");
-
-// for(i=1; i <= 100; i++){
-//   if(i % 2 == 0){
-//       console.log(i)
-//   }
-
-// }
-
-/* 7 */// ODD #S
+/* 7 */// ODD # 's
 console.log("....................................");
 // for(i=1; i <= 100; i++){
 //     if(i % 2 != 0){
@@ -99,33 +78,6 @@ console.log("....................................");
 
 // }
 
-
-/* 11 *///Write a function which takes two numbers as parameters, and checks if one number is evenly divisible by the other. If so, the function returns true. If not, the function returns false.
-console.log("....................................");
-
-// function somet(x){
-
-//     for(i=0; i<x.length; i++){
-//     }
-//     return x.length[i];
-// }
-
-// somet('strng');
-
-/* 12 */// Write a function which takes one string as a parameter, and returns the first and last letters of this string.
-console.log("....................................");
-
-// function somet(x){
-
-//     for(i=0; i<x.length; i++){
-//     }
-//     return x[0].length[i];
-//     return x[4].length[i];
-// }
-
-// somet('strng');
-
-/* 13 */// Write a function which takes one string as a parameter, then uses a for loop to return the number of vowels contained in the string.
 console.log("....................................");
 
 // function somet(x){
@@ -171,3 +123,32 @@ console.log("....................................");
 // }
 // num(1,6);
 
+/* 15 */ //  log number 0-10 but each number repeats own count in the its line
+
+for(var i = 0; i <=10; i++){
+  var n = '';
+  for(var k=0; k<=i; k++){
+    n = n + k;
+  }
+console.log(n)
+};
+
+/* 16 */ // pass a one word as in arguement in function, 
+// to find how many letters are matching and that number returned and log those letters
+// from specific letters in an array it's given in function
+
+function somet(x) {
+  const vowels = ['e', 'y', 'u', 'o', 'i', 'a'];
+
+  let counter = 0;
+  let haha = [];
+  for (i = 0; i < x.length; i++) {
+    if (vowels.includes(x[i])) {
+      counter = counter + 1;
+      haha.push(x[i]);
+    }
+  }
+  console.log(haha);
+  return counter;
+}
+console.log(somet('starening'));
